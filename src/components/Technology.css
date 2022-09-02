@@ -1,0 +1,326 @@
+.technology-container {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url("../assets/technology/background-technology-desktop.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.technology-title {
+    position: absolute;
+    left: 10%;
+    top: 212px;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 400;
+    font-size: 1.75rem;
+    letter-spacing: 4.72px;
+    color: #FFF;
+    text-transform: uppercase;
+}
+
+.technology-title strong {
+    font-weight: 700;
+    opacity: 0.25;
+    margin-right: 24px;
+}
+
+.technology-wrapper {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 180px;
+}
+
+.desactive {
+    display: none;
+}
+
+.technology-infos {
+    display: flex;
+    align-items: center;
+    gap: 10%;
+    width: 100%;
+}
+
+.technology-menu-items {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.technology-menu-item.active {    
+    color: #0B0D17;
+    background-color: #FFF;
+    animation: fadeSelect 1s ease forwards;
+}
+
+.technology-menu-item {
+    font-family: "Bellefair", sans-serif;
+    font-weight: 400;
+    font-size: 2.2919rem;
+    text-align: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #FFF;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.technology-info {
+    width: 470px;
+}
+
+.technology-info h2 {
+    opacity: 0;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: 2.7px;
+    text-transform: uppercase;
+    color: #D0D6F9;
+    margin-bottom: 11px;
+    animation: fadeInTechH2 1s ease forwards;
+}
+
+.technology-info h1 {
+    opacity: 0;
+    font-family: "Bellefair", sans-serif;
+    font-weight: 400;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    color: #FFF;
+    margin-bottom: 17px;
+    animation: fadeInTechH1 1s ease 0.5s forwards;
+}
+
+.technology-info p {
+    opacity: 0;
+    font-family: "Barlow", sans-serif;
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 32px;
+    color: #D0D6F9;
+    animation: fadeInTechP 1s ease 1s forwards;
+}
+
+.technology-images {
+    width: 50%;
+    pointer-events: none;
+}
+
+.technology-images img {
+    width: 100%;
+    animation: fadeInTechImg 2s ease forwards;
+    pointer-events: none;
+}
+
+@media screen and (max-width: 1035px) {
+    .technology-wrapper {
+        width: 100%;
+        flex-direction: column-reverse;
+        margin-top: 275px;
+        gap: 56px;
+    }
+
+    .technology-images {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .technology-infos {
+        flex-direction: column;
+        gap: 44px;
+    }
+
+    .technology-info h2,
+    .technology-info h1,
+    .technology-info p {
+        text-align: center;
+    }
+
+    .technology-menu-items {
+        flex-direction: row;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .technology-container {
+        background-image: url("../assets/technology/background-technology-tablet.jpg");
+        padding-bottom: 13%;
+    }
+    
+    .technology-title {
+        font-size: 1.25rem;
+        letter-spacing: 3.38px;
+        left: 5%;
+        top: 136px;
+    }
+
+    .technology-title strong {
+        margin-right: 16px;
+    }
+
+    .technology-wrapper {
+        margin-top: 220px;
+    }
+
+    .technology-menu-items {
+        gap: 16px;
+    }
+
+    .technology-menu-item {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+
+    .technology-info {
+        width: 57%;
+    }
+
+    .technology-info h2 {
+        margin-bottom: 16px;
+    }
+
+    .technology-info h1 {
+        font-size: 2.5rem;
+        margin-bottom: 16px;
+    }
+
+    .technology-info p {
+        font-size: 1rem;
+        line-height: 28px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .technology-container {
+        background-image: url("../assets/technology/background-technology-mobile.jpg");
+        overflow-x: hidden;
+        justify-content: flex-start;
+    }
+
+    .technology-title {
+        top: 88px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 1rem;
+        letter-spacing: 2.7px;
+    }
+
+    .technology-wrapper {
+        margin-top: 139px;
+        gap: 34px;
+    }
+
+    .technology-menu-item {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .technology-infos {
+        gap: 26px;
+    }
+
+    .technology-info {
+        width: 80%;
+    }
+
+    .technology-info h2 {
+        font-size: 0.875rem;
+        letter-spacing: 2.36px;
+        margin-bottom: 9px;
+    }
+
+    .technology-info h1 {
+        font-size: 1.5rem;
+        margin-bottom: 16px;
+    }
+
+    .technology-info p {
+        font-size: 0.9375rem;
+        line-height: 25px;
+    }
+}
+
+@keyframes fadeSelect {
+    from {
+        background-color: transparent;
+        color: #FFF;
+    }
+
+    to {
+        background-color: #FFF;
+        color: #0B0D17;
+    }
+}
+
+
+@keyframes fadeInTechH2 {
+    from {
+        display: none;
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        display: block;
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInTechH1 {
+    from {
+        display: none;
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        display: block;
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInTechP {
+    from {
+        display: none;
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        display: block;
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInTechImg {
+    from {
+        display: none;
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        display: block;
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}

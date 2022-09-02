@@ -1,0 +1,103 @@
+.notfound-container {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url("../assets/home/background-home-desktop.jpg");    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.notfound-wrapper {
+    width: 50%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(34px);
+    -webkit-backdrop-filter: blur(34px);
+    border-radius: 40px;
+    gap: 50px;
+}
+
+.notfound-title {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 400;
+    font-size: 5rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #FFF;
+}
+
+.notfound-desc {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 400;
+    font-size: 3rem;
+    letter-spacing: 1px;
+    color: #FFF;
+}
+
+.notfound-btn {
+    background-color: #FFF;
+    font-family: "Barlow", sans-serif;
+    font-weight: 400;
+    font-size: 1.3rem;
+    color: #0B0D17;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    transition: background 0.4s ease-out;
+    cursor: pointer;
+}
+
+.notfound-btn:hover {
+    background-color: rgb(230, 220, 220);
+}
+
+@media screen and (max-width: 900px) {
+    .notfound-title {
+        font-size: 3rem;
+    }
+
+    .notfound-desc {
+        font-size: 2rem;
+    }
+
+    .notfound-btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .notfound-container {
+        background-image: url("../assets/home/background-home-tablet.jpg");
+    }
+
+    .notfound-wrapper {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .notfound-container {
+        background-image: url("../assets/home/background-home-mobile.jpg");
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .notfound-wrapper {
+        width: 90%;
+    }
+
+    .notfound-title {
+        font-size: 2rem;
+    }
+
+    .notfound-desc {
+        font-size: 1.5rem;
+    }
+}

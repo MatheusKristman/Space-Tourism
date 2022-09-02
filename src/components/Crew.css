@@ -1,0 +1,336 @@
+.crew-container {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url("../assets/crew/background-crew-desktop.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.crew-title {
+    position: absolute;
+    left: 10%;
+    top: 212px;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 400;
+    font-size: 1.75rem;
+    letter-spacing: 4.72px;
+    text-transform: uppercase;
+    color: #FFF;
+}
+
+.crew-title strong {
+    font-weight: 700;
+    opacity: 0.25;
+    margin-right: 24px;
+}
+
+.crew-wrapper {
+    margin-top: 200px;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.desactive {
+    display: none;
+}
+
+.crew-info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.crew-info h2 {
+    opacity: 0;
+    font-family: "Bellefair", sans-serif;
+    font-weight: 400;
+    font-size: 2rem;
+    color: #FFF;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    animation: fadeInH2 1s ease forwards;
+}
+
+.crew-info h1 {
+    opacity: 0;
+    font-family: "Bellefair", sans-serif;
+    font-weight: 400;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    color: #FFF;
+    margin-bottom: 27px;
+    animation: fadeInH1 1s ease 0.5s forwards;
+}
+
+.crew-info p {
+    opacity: 0;
+    max-width: 444px;
+    font-family: "Barlow", sans-serif;
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 32px;
+    color: #D0D6F9;
+    animation: fadeInP 1s ease 1s forwards;
+}
+
+.crew-images {
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.crew-images img {
+    width: 100%;
+    opacity: 0;
+    animation: fadeInImg 2s ease forwards;
+    pointer-events: none;
+}
+
+.crew-menu-items {
+    position: absolute;
+    bottom: 94px;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    width: 80%;
+}
+
+.crew-menu-item {
+    width: 15px;
+    height: 15px;
+    background-color: #FFF;
+    border-radius: 50%;
+    opacity: 0.17;
+    cursor: pointer;
+}
+
+.crew-menu-item.active {
+    opacity: 1;
+}
+
+@media screen and (max-width: 1250px) {
+    .crew-wrapper {
+        margin-top: 300px;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .crew-info {
+        align-items: center;        
+    }
+
+
+    .crew-info p {
+        margin-bottom: 40px;
+    }
+
+    .crew-menu-items {
+        position: static;
+        justify-content: center;
+        gap: 75px;
+    }
+
+    /* .crew-menu-item {
+        width: 30px;
+        height: 30px;
+    } */
+
+    .crew-images {
+        width: 456px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .crew-container {
+        background-image: url("../assets/crew/background-crew-tablet.jpg");
+    }
+
+    .crew-title {
+        font-size: 1.25rem;
+        letter-spacing: 3.38px;
+        left: 5%;
+        top: 136px;
+    }
+
+    .crew-title strong {
+        margin-right: 16px;
+    }
+
+    .crew-wrapper {
+        margin-top: 220px;
+        width: 70%;
+    }
+
+    .crew-info {
+        width: 100%;
+        justify-content: space-between;
+        height: 280px;
+    }
+
+    .crew-info h2 {
+        text-align: center;
+        font-size: 1.5rem;
+        margin-bottom: 8px;
+    }
+
+    .crew-info h1 {
+        text-align: center;
+        font-size: 2.5rem;
+    }
+
+    .crew-info p {
+        font-size: 1rem;
+        line-height: 28px;
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    .crew-images {
+        height: 520px;
+        justify-content: center;
+    }
+
+    .crew-images img {
+        width: auto;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .crew-container {
+        background-image: url("../assets/crew/background-crew-mobile.jpg");
+        padding-bottom: 54px;
+    }
+
+    .crew-title {
+        top: 88px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1rem;
+        letter-spacing: 2.7px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .crew-wrapper {
+        margin-top: 139px;
+        width: 90%;
+        gap: 32px;
+    }
+
+    .crew-images {
+        order: 1;
+        border-bottom: 1px solid #383B4B;
+        justify-content: center;
+        height: 370px;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .crew-images img {
+        width: auto;
+        height: 100%;
+    }
+
+    .crew-info {
+        order: 2;
+        justify-content: flex-start;
+        gap: 32px;
+    }
+
+    .crew-info div {
+        order: 2;
+    }
+
+    .crew-info div h2 {
+        font-size: 1rem;
+    }
+
+    .crew-info div h1 {
+        font-size: 1.5rem;
+        margin-bottom: 16px;
+    }
+
+    .crew-info div p {
+        font-size: 0.9375rem;
+        line-height: 25px;
+        width: 100%;
+    }
+
+    .crew-menu-items {
+        order: 1;
+        gap: 40px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+
+    .crew-images {
+        height: 250px;
+    }
+}
+
+@keyframes fadeInH2 {
+    from {
+        display: none;
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        display: block;
+        transform: translateY(0px);
+        opacity: 0.5;
+    }
+}
+
+@keyframes fadeInH1 {
+    from {
+        display: none;
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        display: block;
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInP {
+    from {
+        display: none;
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        display: block;
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInImg {
+    from {
+        display: none;
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        display: block;
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}

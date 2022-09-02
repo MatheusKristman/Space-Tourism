@@ -1,0 +1,252 @@
+.home-container {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url("../assets/home/background-home-desktop.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 130px;
+}
+
+.home-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.home-info {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 470px;
+}
+
+.home-info h2 {
+    opacity: 0;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 400;
+    font-size: 1.75rem;
+    letter-spacing: 4.72px;
+    text-transform: uppercase;
+    color: #D0D6F9;
+    animation: LeftToRight 1s ease forwards;
+}
+
+.home-info h1 {
+    opacity: 0;
+    font-family: "Bellefair", sans-serif;
+    font-weight: 400;
+    font-size: 9.375rem;
+    text-transform: uppercase;
+    color: #FFF;
+    animation: LeftToRight 1s ease 0.5s forwards;
+}
+
+.home-info p {
+    opacity: 0;
+    font-family: "Barlow", sans-serif;
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 32px;
+    color: #D0D6F9;
+    animation: LeftToRight 1s ease 1s forwards;
+}
+
+.home-image {
+    opacity: 0;
+    position: relative;
+    animation: RightToLeft 1s ease 1.5s forwards;
+}
+
+.explore-circle {
+    position: relative;
+    background-color: #FFF;
+    width: 274px;
+    height: 274px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 10px solid  rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    z-index: 9;
+}
+
+.explore-circle-hover {
+    background-color: #FFF;
+    width: 270px;
+    height: 270px;
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.1;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+
+.explore-circle h2 {
+    font-family: "Bellefair", sans-serif;
+    font-weight: 400;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #0B0D17;
+}
+
+.explore-circle:hover + .explore-circle-hover {
+    width: 400px;
+    height: 400px;
+}
+
+@media screen and (max-width: 960px) {
+    .home-wrapper {
+        width: 90%;
+    }
+
+    .home-info {
+        width: 350px;
+    }
+
+    .home-info h2 {
+        font-size: 1rem;
+    }
+
+    .home-info h1 {
+        font-size: 7rem;
+    }
+
+    .home-info p {
+        font-size: 1rem;
+    }
+
+    .explore-circle {
+        width: 204px;
+        height: 204px;
+    }
+
+    .explore-circle-hover {
+        width: 200px;
+        height: 200px;
+    }
+
+    .explore-circle:hover + .explore-circle-hover {
+        width: 330px;
+        height: 330px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .home-container {
+        padding-top: 200px;
+        padding-bottom: 90px;
+        background-image: url("../assets/home/background-home-tablet.jpg");
+    }
+
+    .home-wrapper {
+        flex-direction: column;
+        gap: 150px;
+        width: 100%;
+    }
+
+    .home-info {
+        text-align: center;
+    }
+
+    .home-info h1 {
+        font-size: 5rem;
+    }
+
+    .home-info h2 {
+        font-size: 1.25rem;
+        letter-spacing: 3.38px;
+    }
+
+    .home-info p {
+        line-height: 28px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .home-container {
+        background-image: url("../assets/home/background-home-mobile.jpg");
+        padding-top: 110px;
+        padding-bottom: 50px;
+    }
+
+    .home-wrapper {
+        gap: 80px;
+        width: 90%;
+    }
+
+    .home-info {
+        gap: 16px;
+        width: 100%;
+    }
+
+    .home-info h2 {
+        font-size: 1rem;
+        letter-spacing: 2.7px;
+        text-align: center;
+    }
+
+    .home-info h1 {
+        font-size: 4rem;
+        text-align: center;
+    }
+
+    .home-info p {
+        font-size: 0.9375rem;
+        line-height: 25px;
+    }
+
+    .explore-circle {
+        width: 150px;
+        height: 150px;
+    }
+
+    .explore-circle h2 {
+        font-size: 1.25rem;
+        letter-spacing: 1.25px;
+    }
+
+    .explore-circle-hover {
+        width: 145px;
+        height: 145px;
+    }
+
+    .explore-circle:hover + .explore-circle-hover {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@keyframes LeftToRight {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes RightToLeft {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}

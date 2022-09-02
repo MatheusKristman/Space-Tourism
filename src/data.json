@@ -1,0 +1,100 @@
+{
+  "destinations": [
+    {
+      "name": "Lua",
+      "images": {
+        "png": "image-moon.png"
+      },
+      "description": "Veja nosso planeta como você nunca viu antes. Uma viagem relaxante perfeita para ajudar a recuperar a perspectiva e voltar revigorado. Enquanto estiver lá, conheça um pouco da história visitando os locais de pouso da Luna 2 e da Apollo 11.",
+      "distance": "384,400 km",
+      "travel": "3 dias"
+    },
+    {
+      "name": "Marte",
+      "images": {
+        "png": "image-mars.png"
+      },
+      "description": "Não se esqueça de levar suas botas de caminhada. Você precisará delas para enfrentar o Monte Olimpo, a montanha planetária mais alta do nosso sistema solar. É duas vezes e meia o tamanho do Everest!",
+      "distance": "225 mi. km",
+      "travel": "9 meses"
+    },
+    {
+      "name": "Europa",
+      "images": {
+        "png": "image-europa.png"
+      },
+      "description": "A menor das quatro luas galileanas que orbitam Júpiter, Europa é o sonho de um amante de inverno. Com uma superfície gelada, é perfeito para um pouco de patinação no gelo, curling, hóquei ou um simples relaxamento em sua confortável cabine de inverno.",
+      "distance": "628 mi. km",
+      "travel": "3 anos"
+    },
+    {
+      "name": "Titã",
+      "images": {
+        "png": "image-titan.png"
+      },
+      "description": "A única lua conhecida por ter uma atmosfera densa além da Terra, Titã é um lar longe de casa (apenas algumas centenas de graus mais frio!). Como bônus, você obtém vistas impressionantes dos Anéis de Saturno.",
+      "distance": "1.6 bil. km",
+      "travel": "7 anos"
+    }
+  ],
+  "crew": [
+    {
+      "name": "Douglas Hurley",
+      "images": {
+        "png": "image-douglas-hurley.png"
+      },
+      "role": "Comandante",
+      "bio": "Douglas Gerald Hurley é um engenheiro americano, ex-piloto do Corpo de Fuzileiros Navais e ex-astronauta da NASA. Ele foi lançado ao espaço pela terceira vez como comandante da Crew Dragon Demo-2."
+    },
+    {
+      "name": "Mark Shuttleworth",
+      "images": {
+        "png": "image-mark-shuttleworth.png"
+      },
+      "role": "Especialista em Missão",
+      "bio": "Mark Richard Shuttleworth é o fundador e CEO da Canonical, a empresa por trás do sistema operacional Ubuntu baseado em Linux. Shuttleworth se tornou o primeiro sul-africano a viajar para o espaço como turista espacial."
+    },
+    {
+      "name": "Victor Glover",
+      "images": {
+        "png": "image-victor-glover.png"
+      },
+      "role": "Piloto",
+      "bio": "Piloto no primeiro voo operacional da SpaceX Crew Dragon para a Estação Espacial Internacional. Glover é um comandante da Marinha dos EUA, onde pilota um F/A-18. Ele foi membro da tripulação da Expedição 64 e serviu como engenheiro de voo de sistemas de estação."
+    },
+    {
+      "name": "Anousheh Ansari",
+      "images": {
+        "png": "image-anousheh-ansari.png"
+      },
+      "role": "Engenheira de voo",
+      "bio": "Anousheh Ansari é uma engenheira iraniana-americana e cofundadora da Prodea Systems. Ansari foi a quarta turista espacial autofinanciada, a primeira mulher autofinanciada a voar para a ISS e a primeira iraniana no espaço."
+    }
+  ],
+  "technology": [
+    {
+      "name": "Veículo de lançamento",
+      "images": {
+        "portrait": "image-launch-vehicle-portrait.jpg",
+        "landscape": "image-launch-vehicle-landscape.jpg"
+      },
+      "description": "Um veículo de lançamento ou foguete transportador é um veículo movido a foguete usado para transportar uma carga útil da superfície da Terra para o espaço, geralmente para a órbita da Terra ou além. Nosso foguete transportador WEB-X é o mais potente em operação. Com 150 metros de altura, é uma visão inspiradora na plataforma de lançamento!"
+    },
+    {
+      "name": "Espaçoporto",
+      "images": {
+        "portrait": "image-spaceport-portrait.jpg",
+        "landscape": "image-spaceport-landscape.jpg"
+      },
+      "description": "Um espaçoporto ou cosmódromo é um local para lançamento (ou recebimento) de naves espaciais, para analogia: um porto marítimo para navios ou aeroporto para aeronaves. Com sede no famoso Cabo Canaveral, nosso espaçoporto está idealmente situado para aproveitar a rotação da Terra para o lançamento."
+    },
+    {
+      "name": "Cápsula espacial",
+      "images": {
+        "portrait": "image-space-capsule-portrait.jpg",
+        "landscape": "image-space-capsule-landscape.jpg"
+      },
+      "description": "Uma cápsula espacial é uma espaçonave frequentemente tripulada que usa uma cápsula de reentrada de corpo rombudo para reentrar na atmosfera da Terra sem asas. Nossa cápsula é onde você passará seu tempo durante o voo. Inclui uma academia espacial, cinema e muitas outras atividades para mantê-lo entretido."
+    }
+  ]
+}
