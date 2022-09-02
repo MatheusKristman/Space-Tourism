@@ -171,6 +171,10 @@
     .home-info p {
         line-height: 28px;
     }
+
+    .explore-circle-hover {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 375px) {

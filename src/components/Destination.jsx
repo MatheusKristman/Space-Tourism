@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Moon from "../assets/destination/image-moon.png";
 import Mars from "../assets/destination/image-mars.png";
 import Europa from "../assets/destination/image-europa.png";
@@ -10,103 +11,108 @@ const Destination = () => {
     
     const [destinationName, setDestinationName] = useState("Moon");
 
+    const navigate = useNavigate();
+
     useEffect(() => {
         selectInfo(0);
     }, []);
 
     useEffect(() => {
+        function handleDestinationAnimation() {
+            const moon = document.querySelector("#moon");
+            const mars = document.querySelector("#mars");
+            const europa = document.querySelector("#europa");
+            const titan = document.querySelector("#titan");
+            
+            switch (destinationName) {
+                case "Moon":
+                    mars.classList.remove("destination-selected");
+                    europa.classList.remove("destination-selected");
+                    titan.classList.remove("destination-selected");
+                    europa.classList.remove("destination-not-selected-left");
+                    mars.classList.remove("destination-not-selected-left");
+                    titan.classList.remove("destination-not-selected-left");
+                    europa.classList.remove("destination-not-selected-right");
+                    mars.classList.remove("destination-not-selected-right");
+                    titan.classList.remove("destination-not-selected-right");
+                    
+                    moon.classList.remove("destination-not-selected-left");
+    
+                    moon.classList.add("destination-selected");
+                    mars.classList.add("destination-not-selected-right");
+                    europa.classList.add("destination-not-selected-right");
+                    titan.classList.add("destination-not-selected-right");
+                    break;
+                
+                case "Mars":
+                    moon.classList.remove("destination-selected");
+                    europa.classList.remove("destination-selected");
+                    titan.classList.remove("destination-selected");
+                    moon.classList.remove("destination-not-selected-left");
+                    europa.classList.remove("destination-not-selected-left");
+                    titan.classList.remove("destination-not-selected-left");
+                    moon.classList.remove("destination-not-selected-right");
+                    europa.classList.remove("destination-not-selected-right");
+                    titan.classList.remove("destination-not-selected-right");
+    
+                    mars.classList.remove("destination-not-selected-left");
+                    mars.classList.remove("destination-not-selected-right");
+    
+                    mars.classList.add("destination-selected");
+                    moon.classList.add("destination-not-selected-left");
+                    europa.classList.add("destination-not-selected-right");
+                    titan.classList.add("destination-not-selected-right");
+                    break;
+                
+                case "Europa":
+                    moon.classList.remove("destination-selected");
+                    mars.classList.remove("destination-selected");
+                    titan.classList.remove("destination-selected");
+                    moon.classList.remove("destination-not-selected-left");
+                    mars.classList.remove("destination-not-selected-left");
+                    titan.classList.remove("destination-not-selected-left");
+                    moon.classList.remove("destination-not-selected-right");
+                    mars.classList.remove("destination-not-selected-right");
+                    titan.classList.remove("destination-not-selected-right");
+    
+                    europa.classList.remove("destination-not-selected-left");
+                    europa.classList.remove("destination-not-selected-right");
+    
+                    europa.classList.add("destination-selected");
+                    moon.classList.add("destination-not-selected-left");
+                    mars.classList.add("destination-not-selected-left");
+                    titan.classList.add("destination-not-selected-right");
+                    break;
+                
+                case "Titan":
+                    moon.classList.remove("destination-selected");
+                    mars.classList.remove("destination-selected");
+                    europa.classList.remove("destination-selected");
+                    moon.classList.remove("destination-not-selected-left")
+                    mars.classList.remove("destination-not-selected-left")
+                    europa.classList.remove("destination-not-selected-left")
+                    moon.classList.remove("destination-not-selected-right")
+                    mars.classList.remove("destination-not-selected-right")
+                    europa.classList.remove("destination-not-selected-right")
+    
+                    titan.classList.remove("destination-not-selected-right");
+    
+                    titan.classList.add("destination-selected");
+                    moon.classList.add("destination-not-selected-left");
+                    mars.classList.add("destination-not-selected-left");
+                    europa.classList.add("destination-not-selected-left");
+                    break;
+                default:
+                    break;
+            }        
+        }
+
         handleDestinationAnimation();
     }, [destinationName]);
 
     function handleDestinationSelection(dest) {
         setDestinationName(dest);
-    }
-
-    function handleDestinationAnimation() {
-        const moon = document.querySelector("#moon");
-        const mars = document.querySelector("#mars");
-        const europa = document.querySelector("#europa");
-        const titan = document.querySelector("#titan");
-        
-        switch (destinationName) {
-            case "Moon":
-                mars.classList.remove("destination-selected");
-                europa.classList.remove("destination-selected");
-                titan.classList.remove("destination-selected");
-                europa.classList.remove("destination-not-selected-left");
-                mars.classList.remove("destination-not-selected-left");
-                titan.classList.remove("destination-not-selected-left");
-                europa.classList.remove("destination-not-selected-right");
-                mars.classList.remove("destination-not-selected-right");
-                titan.classList.remove("destination-not-selected-right");
-                
-                moon.classList.remove("destination-not-selected-left");
-
-                moon.classList.add("destination-selected");
-                mars.classList.add("destination-not-selected-right");
-                europa.classList.add("destination-not-selected-right");
-                titan.classList.add("destination-not-selected-right");
-                break;
-            
-            case "Mars":
-                moon.classList.remove("destination-selected");
-                europa.classList.remove("destination-selected");
-                titan.classList.remove("destination-selected");
-                moon.classList.remove("destination-not-selected-left");
-                europa.classList.remove("destination-not-selected-left");
-                titan.classList.remove("destination-not-selected-left");
-                moon.classList.remove("destination-not-selected-right");
-                europa.classList.remove("destination-not-selected-right");
-                titan.classList.remove("destination-not-selected-right");
-
-                mars.classList.remove("destination-not-selected-left");
-                mars.classList.remove("destination-not-selected-right");
-
-                mars.classList.add("destination-selected");
-                moon.classList.add("destination-not-selected-left");
-                europa.classList.add("destination-not-selected-right");
-                titan.classList.add("destination-not-selected-right");
-                break;
-            
-            case "Europa":
-                moon.classList.remove("destination-selected");
-                mars.classList.remove("destination-selected");
-                titan.classList.remove("destination-selected");
-                moon.classList.remove("destination-not-selected-left");
-                mars.classList.remove("destination-not-selected-left");
-                titan.classList.remove("destination-not-selected-left");
-                moon.classList.remove("destination-not-selected-right");
-                mars.classList.remove("destination-not-selected-right");
-                titan.classList.remove("destination-not-selected-right");
-
-                europa.classList.remove("destination-not-selected-left");
-                europa.classList.remove("destination-not-selected-right");
-
-                europa.classList.add("destination-selected");
-                moon.classList.add("destination-not-selected-left");
-                mars.classList.add("destination-not-selected-left");
-                titan.classList.add("destination-not-selected-right");
-                break;
-            
-            case "Titan":
-                moon.classList.remove("destination-selected");
-                mars.classList.remove("destination-selected");
-                europa.classList.remove("destination-selected");
-                moon.classList.remove("destination-not-selected-left")
-                mars.classList.remove("destination-not-selected-left")
-                europa.classList.remove("destination-not-selected-left")
-                moon.classList.remove("destination-not-selected-right")
-                mars.classList.remove("destination-not-selected-right")
-                europa.classList.remove("destination-not-selected-right")
-
-                titan.classList.remove("destination-not-selected-right");
-
-                titan.classList.add("destination-selected");
-                moon.classList.add("destination-not-selected-left");
-                mars.classList.add("destination-not-selected-left");
-                europa.classList.add("destination-not-selected-left");
-        }        
-    }
+    }    
 
     function selectInfo(id) {
         const infoEl = document.querySelectorAll(".destination-info");
@@ -114,6 +120,11 @@ const Destination = () => {
         infoEl.forEach((el) => { 
             el.id === `dest${id}` ? el.classList.remove("desactive") : el.classList.add("desactive");
         });
+    }
+
+    function handleNextPage() {
+        window.scrollTo(0, 0);
+        navigate("/crew");
     }
 
     return (
@@ -177,7 +188,15 @@ const Destination = () => {
                             </div>
                         </div>
                     </div>
-                ))}                
+                ))}
+
+                {document.body.clientWidth <= 600 ? (
+                    <div onClick={handleNextPage} className="mobile-dest-next-page">
+                        <h2>Tripulação</h2>
+                    </div>
+                ) : (
+                    null
+                )}             
             </section>
         </div>
     );

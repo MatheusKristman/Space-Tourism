@@ -270,6 +270,29 @@
         order: 1;
         gap: 40px;
     }
+
+    .mobile-crew-next-page {
+        opacity: 0;
+        margin-top: 30px;
+        width: 150px;
+        height: 150px;
+        background-color: #FFF;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: fadeInImg 1s ease 1.5s forwards;
+    }
+
+    .mobile-crew-next-page h2 {
+        font-family: "Bellefair", sans-serif;
+        font-size: 1rem;
+        text-align: center;
+        color: #0B0D17;
+        text-transform: uppercase;
+        line-height: 20px;
+        width: 90%;
+    }
 }
 
 @media screen and (max-width: 350px) {

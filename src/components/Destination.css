@@ -285,6 +285,26 @@
         flex-direction: column;
         gap: 32px;
     }
+
+    .mobile-dest-next-page {
+        opacity: 0;
+        margin-top: 30px;
+        width: 150px;
+        height: 150px;
+        background-color: #FFF;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: fadeInDest 1s ease 1.5s forwards;
+    }
+
+    .mobile-dest-next-page h2 {
+        font-family: "Bellefair", sans-serif;
+        font-size: 1.25rem;
+        color: #0B0D17;
+        text-transform: uppercase;
+    }
 }
 
 @keyframes fadeInDest {

@@ -1,8 +1,11 @@
 import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import data from "../data.json";
 import "./Crew.css";
 
 const Crew = () => {
+
+    const navigate = useNavigate();
 
     useEffect(() => {
         function loadFirst() {
@@ -37,6 +40,11 @@ const Crew = () => {
         selectBtn(id);
     }
 
+    function handleNextPage() {
+        window.scrollTo(0, 0);
+        navigate("/technology");
+    }
+
     return (
         <div className="crew-container">
             <span className="crew-title"><strong>02</strong>conheça sua equipe</span>
@@ -62,7 +70,15 @@ const Crew = () => {
                     </div>
 
                 </section>
-            ))}                
+            ))}
+
+            {document.body.clientWidth <= 600 ? (                    
+                <div onClick={handleNextPage} className="mobile-crew-next-page">
+                    <h2>Tecnologias do transporte</h2>
+                </div>
+            ) : (
+                null
+            )}
         </div>
     );
 };
