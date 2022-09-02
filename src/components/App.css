@@ -71,9 +71,9 @@ body {
 .header-menu {
     position: relative;
     background-color: rgba(255, 255, 255, 0.04);
+    padding: 40px 165px 40px 125px;
     backdrop-filter: blur(34px);
     -webkit-backdrop-filter: blur(34px);
-    padding: 40px 165px 40px 125px;
 }
 
 .header-line {
@@ -339,9 +339,9 @@ body {
         gap: 32px;
         height: 100vh;
         background-color: rgba(255, 255, 255, 0.04);
+        transition: width 0.4s ease-in-out;
         backdrop-filter: blur(34px);
         -webkit-backdrop-filter: blur(34px);
-        transition: width 0.4s ease-in-out;
     }
 
     .menu-items li {
