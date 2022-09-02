@@ -338,8 +338,9 @@ body {
         z-index: 99;
         gap: 32px;
         height: 100vh;
+        opacity: 0;
         background-color: rgba(255, 255, 255, 0.04);
-        transition: width 0.4s ease-in-out;
+        transition: width 0.4s ease-in-out, opacity 0.4s ease-in-out;
         -webkit-backdrop-filter: blur(34px);
         backdrop-filter: blur(34px);
     }
@@ -349,9 +350,10 @@ body {
     }
     
     .menu-opened {
+        opacity: 1;
         width: 70%;
         padding: 120px 0 0 32px;
-        transition: width 0.4s ease-in-out;        
+        transition: width 0.4s ease-in-out, opacity 0.4s ease-in-out;        
     }
 
     .menu-opened li {
